@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import Accordion from "@/components/Accordion";
 import { Avatar } from "@/components/Avatar";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -7,6 +8,7 @@ import { PageSubTitle } from "@/components/PageSubTitle";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 import Recycle from "@/app/assets/svgs/recycle.svg";
+import useDeviceView from "@/hooks/useDeviceView";
 
 const FAQS = [
   {
@@ -37,17 +39,19 @@ const FAQS = [
 ];
 
 export default function HomePage() {
+  const isMobile = useDeviceView();
+
   return (
     <>
       <section>
-        <div className="container mx-auto py-8">
-          <div className="flex flex-row gap-8">
+        <div className="container mx-auto py-8 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-1 pt-8 max-w-[519px] flex flex-col gap-4 items-start">
-              <h1 className="text-[36px] font-semibold leading-[43.88px]">
+              <h1 className="text-[24px] md:text-[36px] font-semibold leading-[29.26px] md:leading-[43.88px]">
                 Transform Waste into Value with Blockchain-Driven Recycling
               </h1>
 
-              <p className="text-[20px] leading-[24.38px]">
+              <p className="text-[16px] md:text-[20px] leading-[19.5px] md:leading-[24.38px]">
                 Earn rewards for recycling while supporting a transparent and
                 sustainable future.
               </p>
@@ -59,58 +63,61 @@ export default function HomePage() {
                 <div className="bg-[#228B22] rounded-[40px] flex items-center justify-center px-2 py-1">
                   <RiArrowRightSLine color="#fff" size={18} />
                 </div>
-                <span className="text-white">Sign Up</span>
+                <span className="text-white text-[16px] leading-[19.5px]">
+                  Sign Up
+                </span>
               </button>
 
               <div className="flex flex-row items-center">
                 <Avatar
                   path="/images/avatar1.png"
-                  radius={24}
-                  className="bg-[#179300] z-[5]"
+                  radius={isMobile ? 16 : 24}
+                  className="!bg-[#179300] z-[5]"
                 />
                 <Avatar
                   path="/images/avatar2.png"
-                  radius={24}
-                  className="bg-[#b190b6] z-[4] -ml-[10px]"
+                  radius={isMobile ? 16 : 24}
+                  className="!bg-[#b190b6] z-[4] -ml-[10px]"
                 />
                 <Avatar
                   path="/images/avatar3.png"
-                  radius={24}
-                  className="bg-[#e9177c] z-[3] -ml-[10px]"
+                  radius={isMobile ? 16 : 24}
+                  className="!bg-[#e9177c] z-[3] -ml-[10px]"
                 />
                 <Avatar
                   path="/images/avatar4.png"
-                  radius={24}
-                  className="bg-[#d80600] z-[2] -ml-[10px]"
+                  radius={isMobile ? 16 : 24}
+                  className="!bg-[#d80600] z-[2] -ml-[10px]"
                 />
                 <Avatar
                   path="/images/avatar5.png"
-                  radius={24}
-                  className="bg-[#228b23] -ml-[10px]"
+                  radius={isMobile ? 16 : 24}
+                  className="!bg-[#228b23] -ml-[10px]"
                 />
 
-                <span className="text-[24px] ml-2 leading-[29.05px]">
+                <span className="text-[16px] md:text-[24px] ml-2 leading-[19.36px] md:leading-[29.05px]">
                   300k+
                 </span>
               </div>
 
-              <p className="text-[20px] leading-[24.38px] -mt-2">
-                People use our platform{" "}
+              <p className="text-[16px] md:text-[20px] leading-[19.36px] md:leading-[24.38px] -mt-2">
+                People use our platform
               </p>
             </div>
 
             <div className="flex-1 relative">
-              <div className="w-3/4 mx-auto relative">
-                <div className="grid grid-cols-2 gap-[20px] w-fit absolute bottom-[85px] -left-[30px]">
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
-                  <div className="h-[20px] w-[20px] bg-[#228B22] rounded-[10px]"></div>
+              <div className="w-4/5 md:w-3/4 mx-auto relative">
+                <div className="grid grid-cols-2 gap-[10px] w-fit absolute bottom-[42.5px] md:bottom-[85px] -left-[15px] md:-left-[30px]">
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
+                  <div className="h-[10px] md:h-[20px] w-[10px] md:w-[20px] bg-[#228B22] rounded-[5px] md:rounded-[10px]"></div>
                 </div>
+
                 <img
                   src="/images/image1.png"
                   className="w-full h-auto"
@@ -119,22 +126,22 @@ export default function HomePage() {
                 />
               </div>
 
-              <div className="w-full h-[97px] rounded-[20px] border-[1px] border-[#000000] -mt-[45px]"></div>
+              <div className="w-full h-[56px] md:h-[97px] rounded-[20px] border-[1px] border-[#000000] -mt-[25px] md:-mt-[45px]"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mt-20">
-        <div className="container mx-auto py-8">
+      <section className="mt-10 md:mt-20">
+        <div className="container mx-auto py-8 px-4 md:px-0">
           <div className="flex flex-col gap-4 items-center">
             <PageSubTitle text="How It Works" />
 
-            <h1 className="text-[36px] font-semibold leading-[43.57px] text-center w-[684px]">
+            <h1 className="text-[24px] md:text-[36px] font-semibold leading-[29.26px] md:leading-[43.57px] text-center md:w-[684px]">
               Why should you use Recycle Pro to transform your waste
             </h1>
 
-            <div className="w-full grid grid-cols-3 gap-4">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
               <HowItWorksCard
                 title="Recycle"
                 imagePath="/images/recycle.png"
@@ -158,17 +165,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-20">
-        <div className="container mx-auto py-8">
+      <section className="mt-10 md:mt-20">
+        <div className="container mx-auto py-8 px-4 md:px-0">
           <div className="flex flex-col gap-4 items-center">
             <PageSubTitle text="Key features" />
 
-            <h1 className="text-[36px] font-semibold leading-[43.57px] text-center w-[684px]">
+            <h1 className="text-[24px] md:text-[36px] font-semibold leading-[29.26px] md:leading-[43.57px] text-center md:w-[684px]">
               What makes us stand out among other platforms?
             </h1>
 
-            <div className="w-full grid grid-cols-3 gap-4">
-              <div className="col-span-2">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="md:col-span-2">
                 <FeatureCard
                   imageUrl="/images/blockchain-transparency.png"
                   text="Blockchain Transparency"
@@ -187,7 +194,7 @@ export default function HomePage() {
                   text="Environmental Impact"
                 />
               </div>
-              <div className="col-span-2">
+              <div className="md:col-span-2">
                 <FeatureCard
                   imageUrl="/images/proof-of-action.png"
                   text="Proof of Action"
@@ -198,41 +205,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-20">
-        <div className="container mx-auto py-8">
+      <section className="mt-10 md:mt-20">
+        <div className="container mx-auto py-8 px-4 md:px-0">
           <div className="flex flex-col gap-4 items-center">
             <PageSubTitle text="FAQs" />
 
-            <h1 className="text-[36px] font-semibold leading-[43.57px] text-center w-[684px]">
+            <h1 className="text-[24px] md:text-[36px] font-semibold leading-[29.26px] md:leading-[43.57px] text-center md:w-[684px]">
               Common questions you might need answered
             </h1>
 
-            <div className="flex flex-col gap-4 mb-20">
+            <div className="flex flex-col gap-4 md:mb-20">
               {FAQS.map((item, idx) => (
                 <Accordion key={`faq-${idx}`} {...item} />
               ))}
             </div>
 
-            <div className="w-full flex flex-row relative py-8 px-4 -mb-[100px]">
-              <div className="absolute left-0 top-0 w-full h-full">
-                <div className="relative overflow-hidden w-3/4 bg-[#D1E9CC] h-[372px] mx-auto rounded-[40px] flex flex-col items-center justify-center gap-4 px-20 py-10">
-                  <p className="text-[24px] leading-[29.26px] font-semibold text-center">
+            <div className="w-full flex flex-row relative py-8 md:px-4 -mb-[150px] md:-mb-[100px]">
+              <div className="md:absolute md:left-0 md:top-0 w-full md:h-full">
+                <div className="relative overflow-hidden md:w-3/4 bg-[#D1E9CC] md:h-[372px] mx-auto rounded-[40px] flex flex-col items-center justify-center gap-4 md:px-20 py-10">
+                  <p className="z-20 text-[20px] md:text-[24px] leading-[24.38px] md:leading-[29.26px] font-semibold text-center">
                     Earn rewards for recycling while supporting a transparent
                     and sustainable future.
                   </p>
 
-                  <p className="text-[20px] leading-[24.38px] text-center">
+                  <p className="text-[16px] md:text-[20px] leading-[19.5px] md:leading-[24.38px] text-center">
                     Start Recycling Today
                   </p>
 
                   <button
-                    className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2"
+                    className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2 z-20"
                     type="button"
                   >
                     <div className="bg-[#228B22] rounded-[40px] flex items-center justify-center px-2 py-1">
                       <RiArrowRightSLine color="#fff" size={18} />
                     </div>
-                    <span className="text-white">Sign Up</span>
+                    <span className="text-white text-[16px] leading-[19.5px]">
+                      Sign Up
+                    </span>
                   </button>
 
                   <div className="absolute -left-[30px] top-[40%]">
@@ -249,15 +258,17 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="flex-[1]">
+              <div className="hidden md:block flex-[1]">
                 <img
                   src="/images/image2.png"
                   alt=""
                   className="rounded-[20px] object-cover h-[305px] w-full"
                 />
               </div>
-              <div className="flex-[2]"></div>
-              <div className="flex-[1]">
+
+              <div className="hidden md:block flex-[2]"></div>
+
+              <div className="hidden md:block flex-[1]">
                 <img
                   src="/images/image3.png"
                   alt=""

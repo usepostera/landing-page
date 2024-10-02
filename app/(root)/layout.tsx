@@ -10,7 +10,7 @@ const RootLayout = ({
     <div className="min-h-screen w-full">
       <AppHeader />
 
-      <main className="mt-[100px]">{children}</main>
+      <main className="md:mt-[100px]">{children}</main>
 
       <AppFooter />
     </div>

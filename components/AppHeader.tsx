@@ -27,7 +27,7 @@ export const AppHeader: React.FC = () => {
 
   return (
     <header
-      className={`z-50 fixed top-0 left-0 w-full py-4 bg-white transition-transform duration-300 h-[100px] ${
+      className={`z-50 hidden md:block fixed top-0 left-0 w-full py-4 bg-white transition-transform duration-300 h-[100px] ${
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >

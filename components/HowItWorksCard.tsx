@@ -15,14 +15,18 @@ export const HowItWorksCard: React.FC<Props> = (props) => {
     <div
       className={`h-full rounded-[20px] px-4 pt-10 pb-4 flex flex-col items-start gap-4 ${className}`}
     >
-      <h4 className="text-[24px] leading-[29.05px] font-semibold">{title}</h4>
+      <h4 className="text-[20px] md:text-[24px] leading-[24.38px] md:leading-[29.05px] font-semibold">
+        {title}
+      </h4>
 
-      <p className="text-[20px] leading-[24.2px]">{content}</p>
+      <p className="text-[16px] md:text-[20px] leading-[19.5px] md:leading-[24.2px]">
+        {content}
+      </p>
 
       <img
         src={imagePath}
         alt=""
-        className="w-full h-[232px] object-cover rounded-[18.46px]"
+        className="w-full h-[200px] md:h-[232px] object-cover rounded-[18.46px]"
       />
     </div>
   );
