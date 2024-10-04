@@ -9,6 +9,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 
 import Recycle from "@/app/assets/svgs/recycle.svg";
 import useDeviceView from "@/hooks/useDeviceView";
+import Link from "next/link";
 
 const FAQS = [
   {
@@ -56,17 +57,19 @@ export default function HomePage() {
                 sustainable future.
               </p>
 
-              <button
-                className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2"
-                type="button"
-              >
-                <div className="bg-[#228B22] rounded-[40px] flex items-center justify-center px-2 py-1">
-                  <RiArrowRightSLine color="#fff" size={18} />
-                </div>
-                <span className="text-white text-[16px] leading-[19.5px]">
-                  Sign Up
-                </span>
-              </button>
+              <Link href={"postera-web-app.pages.dev/signup"} target="_blank">
+                <button
+                  className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2"
+                  type="button"
+                >
+                  <div className="bg-[#228B22] rounded-[40px] flex items-center justify-center px-2 py-1">
+                    <RiArrowRightSLine color="#fff" size={18} />
+                  </div>
+                  <span className="text-white text-[16px] leading-[19.5px]">
+                    Sign Up
+                  </span>
+                </button>
+              </Link>
 
               <div className="flex flex-row items-center">
                 <Avatar
@@ -232,17 +235,22 @@ export default function HomePage() {
                     Start Recycling Today
                   </p>
 
-                  <button
-                    className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2 z-20"
-                    type="button"
+                  <Link
+                    href={"postera-web-app.pages.dev/signup"}
+                    target="_blank"
                   >
-                    <div className="bg-[#228B22] rounded-[40px] flex items-center justify-center px-2 py-1">
-                      <RiArrowRightSLine color="#fff" size={18} />
-                    </div>
-                    <span className="text-white text-[16px] leading-[19.5px]">
-                      Sign Up
-                    </span>
-                  </button>
+                    <button
+                      className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2 z-20"
+                      type="button"
+                    >
+                      <div className="bg-[#228B22] rounded-[40px] flex items-center justify-center px-2 py-1">
+                        <RiArrowRightSLine color="#fff" size={18} />
+                      </div>
+                      <span className="text-white text-[16px] leading-[19.5px]">
+                        Sign Up
+                      </span>
+                    </button>
+                  </Link>
 
                   <div className="absolute -left-[30px] top-[40%]">
                     <Recycle />

@@ -2,6 +2,7 @@ import React from "react";
 import { AppBottomSheetWrapper } from "./AppBottomSheet";
 import { NavLink } from "./NavLink";
 import Logo from "@/app/assets/svgs/logo-transparent-2.svg";
+import Link from "next/link";
 
 type Props = {
   isOpen: boolean;
@@ -24,14 +25,16 @@ export const MobileNavMenu: React.FC<Props> = (props) => {
           <NavLink label="FAQs" />
 
           <div className="bg-[#000000] py-2 px-4 h-full rounded-[60px] gap-4">
-            <button
-              className={
-                "bg-white cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[16px] text-black leading-[19.2px]"
-              }
-              type="button"
-            >
-              Sign up
-            </button>
+            <Link href={"postera-web-app.pages.dev/signup"} target="_blank">
+              <button
+                className={
+                  "bg-white cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[16px] text-black leading-[19.2px]"
+                }
+                type="button"
+              >
+                Sign up
+              </button>
+            </Link>
 
             <button
               className={

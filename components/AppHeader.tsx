@@ -5,6 +5,7 @@ import Logo from "@/app/assets/svgs/logo-transparent-2.svg";
 import { IoIosMenu } from "react-icons/io";
 import useDeviceView from "@/hooks/useDeviceView";
 import { MobileNavMenu } from "./MobileNavMenu";
+import Link from "next/link";
 
 export const AppHeader: React.FC = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -73,14 +74,16 @@ export const AppHeader: React.FC = () => {
             </div>
 
             <div className="hidden md:block bg-[#000000] py-2 px-4 h-full rounded-[60px] gap-4">
-              <button
-                className={
-                  "bg-white cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[20px] text-black leading-[24px]"
-                }
-                type="button"
-              >
-                Sign up
-              </button>
+              <Link href={"postera-web-app.pages.dev/signup"} target="_blank">
+                <button
+                  className={
+                    "bg-white cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[20px] text-black leading-[24px]"
+                  }
+                  type="button"
+                >
+                  Sign up
+                </button>
+              </Link>
 
               <button
                 className={
