@@ -14,8 +14,10 @@ export const NavLink: React.FC<Props> = (props) => {
     <Link href={path || "#"}>
       <button
         className={`${
-          isActive ? "bg-[#228B22]" : "bg-transparent"
-        } cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[20px] text-white leading-[24px]`}
+          isActive
+            ? "text-white bg-[#228B22]"
+            : "bg-transparent text-black md:text-white"
+        } cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 font-normal text-[20px] leading-[24px]`}
         type="button"
       >
         {label}
