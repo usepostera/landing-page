@@ -57,7 +57,10 @@ export default function HomePage() {
                 sustainable future.
               </p>
 
-              <Link href={"postera-web-app.pages.dev/signup"} target="_blank">
+              <Link
+                href={"https://postera-web-app.pages.dev/signup"}
+                target="_blank"
+              >
                 <button
                   className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2"
                   type="button"
@@ -236,7 +239,7 @@ export default function HomePage() {
                   </p>
 
                   <Link
-                    href={"postera-web-app.pages.dev/signup"}
+                    href={"https://postera-web-app.pages.dev/signup"}
                     target="_blank"
                   >
                     <button

@@ -30,7 +30,10 @@ export const AppFooter: React.FC = () => {
             </p>
 
             <div className="bg-[#000000] py-2 px-4 rounded-[60px] gap-4 w-fit">
-              <Link href={"postera-web-app.pages.dev/signup"} target="_blank">
+              <Link
+                href={"https://postera-web-app.pages.dev/signup"}
+                target="_blank"
+              >
                 <button
                   className={
                     "bg-white cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[16px] md:text-[20px] text-black leading-[19.5px] md:leading-[24px]"

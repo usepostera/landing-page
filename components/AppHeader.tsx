@@ -74,7 +74,10 @@ export const AppHeader: React.FC = () => {
             </div>
 
             <div className="hidden md:block bg-[#000000] py-2 px-4 h-full rounded-[60px] gap-4">
-              <Link href={"postera-web-app.pages.dev/signup"} target="_blank">
+              <Link
+                href={"https://postera-web-app.pages.dev/signup"}
+                target="_blank"
+              >
                 <button
                   className={
                     "bg-white cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[20px] text-black leading-[24px]"
