@@ -99,7 +99,7 @@ export default function HomePage() {
                 />
 
                 <span className="text-[16px] md:text-[24px] ml-2 leading-[19.36px] md:leading-[29.05px]">
-                  300k+
+                  +
                 </span>
               </div>
 
