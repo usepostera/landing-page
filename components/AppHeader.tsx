@@ -75,7 +75,7 @@ export const AppHeader: React.FC = () => {
 
             <div className="hidden md:block bg-[#000000] py-2 px-4 h-full rounded-[60px] gap-4">
               <Link
-                href={"https://postera-web-app.pages.dev/signup"}
+                href={"https://https://postera-web-app.pages.dev"}
                 target="_blank"
               >
                 <button

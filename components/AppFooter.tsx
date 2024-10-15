@@ -31,7 +31,7 @@ export const AppFooter: React.FC = () => {
 
             <div className="bg-[#000000] py-2 px-4 rounded-[60px] gap-4 w-fit">
               <Link
-                href={"https://postera-web-app.pages.dev/signup"}
+                href={"https://https://postera-web-app.pages.dev"}
                 target="_blank"
               >
                 <button

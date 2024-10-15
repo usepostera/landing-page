@@ -58,7 +58,7 @@ export default function HomePage() {
               </p>
 
               <Link
-                href={"https://postera-web-app.pages.dev/signup"}
+                href={"https://https://postera-web-app.pages.dev"}
                 target="_blank"
               >
                 <button
@@ -239,7 +239,7 @@ export default function HomePage() {
                   </p>
 
                   <Link
-                    href={"https://postera-web-app.pages.dev/signup"}
+                    href={"https://https://postera-web-app.pages.dev"}
                     target="_blank"
                   >
                     <button

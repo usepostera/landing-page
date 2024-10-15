@@ -26,7 +26,7 @@ export const MobileNavMenu: React.FC<Props> = (props) => {
 
           <div className="bg-[#000000] py-2 px-4 h-full rounded-[60px] gap-4">
             <Link
-              href={"https://postera-web-app.pages.dev/signup"}
+              href={"https://https://postera-web-app.pages.dev"}
               target="_blank"
             >
               <button
