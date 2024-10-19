@@ -85,14 +85,16 @@ export const AppHeader: React.FC = () => {
                 </button>
               </Link>
 
-              <button
-                className={
-                  "bg-transparent cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[20px] text-white leading-[24px]"
-                }
-                type="button"
-              >
-                Sign in
-              </button>
+              <Link href={"https://app.usepostera.com"} target="_blank">
+                <button
+                  className={
+                    "bg-transparent cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[20px] text-white leading-[24px]"
+                  }
+                  type="button"
+                >
+                  Sign in
+                </button>
+              </Link>
             </div>
 
             <div className="block md:hidden">

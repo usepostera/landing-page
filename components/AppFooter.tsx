@@ -2,10 +2,10 @@
 import Logo from "@/app/assets/svgs/logo-transparent-2.svg";
 import Link from "next/link";
 
-import { CiInstagram } from "react-icons/ci";
+// import { CiInstagram } from "react-icons/ci";
 import { RiTwitterXLine } from "react-icons/ri";
-import { FaLinkedinIn } from "react-icons/fa";
-import { CiYoutube } from "react-icons/ci";
+// import { FaLinkedinIn } from "react-icons/fa";
+// import { CiYoutube } from "react-icons/ci";
 import useDeviceView from "@/hooks/useDeviceView";
 
 export const AppFooter: React.FC = () => {
@@ -41,14 +41,16 @@ export const AppFooter: React.FC = () => {
                 </button>
               </Link>
 
-              <button
-                className={
-                  "bg-transparent cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[16px] md:text-[20px] text-white leading-[19.5px] md:leading-[24px]"
-                }
-                type="button"
-              >
-                Sign in
-              </button>
+              <Link href={"https://app.usepostera.com"} target="_blank">
+                <button
+                  className={
+                    "bg-transparent cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[16px] md:text-[20px] text-white leading-[19.5px] md:leading-[24px]"
+                  }
+                  type="button"
+                >
+                  Sign in
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -81,22 +83,22 @@ export const AppFooter: React.FC = () => {
             </div>
 
             <div>
-              <Link href={"#"} className="block mb-6">
+              {/* <Link href={"#"} className="block mb-6">
                 <CiInstagram size={isMobile ? 20 : 24} color="#ffffff" />
-              </Link>
+              </Link> */}
               <Link
-                href={"https://x.com/Po_stera"}
+                href={"https://x.com/UsePostera"}
                 target="_blank"
                 className="block mb-6"
               >
                 <RiTwitterXLine size={isMobile ? 20 : 24} color="#ffffff" />
               </Link>
-              <Link href={"#"} className="block mb-6">
+              {/* <Link href={"#"} className="block mb-6">
                 <FaLinkedinIn size={isMobile ? 20 : 24} color="#ffffff" />
-              </Link>
-              <Link href={"#"} className="block mb-6">
+              </Link> */}
+              {/* <Link href={"#"} className="block mb-6">
                 <CiYoutube size={isMobile ? 20 : 24} color="#ffffff" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
