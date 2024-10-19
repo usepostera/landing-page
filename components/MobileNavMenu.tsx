@@ -25,7 +25,7 @@ export const MobileNavMenu: React.FC<Props> = (props) => {
           <NavLink label="FAQs" />
 
           <div className="bg-[#000000] py-2 px-4 h-full rounded-[60px] gap-4">
-            <Link href={"https://postera-web-app.pages.dev"} target="_blank">
+            <Link href={"https://app.usepostera.com"} target="_blank">
               <button
                 className={
                   "bg-white cursor-pointer transition-colors duration-300 w-fit rounded-[32px] py-2 px-4 text-[16px] text-black leading-[19.2px]"

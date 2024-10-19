@@ -57,7 +57,7 @@ export default function HomePage() {
                 sustainable future.
               </p>
 
-              <Link href={"https://postera-web-app.pages.dev"} target="_blank">
+              <Link href={"https://app.usepostera.com"} target="_blank">
                 <button
                   className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2"
                   type="button"
@@ -235,10 +235,7 @@ export default function HomePage() {
                     Start Recycling Today
                   </p>
 
-                  <Link
-                    href={"https://postera-web-app.pages.dev"}
-                    target="_blank"
-                  >
+                  <Link href={"https://app.usepostera.com"} target="_blank">
                     <button
                       className="cursor-pointer bg-black py-2 px-4 flex flex-row items-center rounded-[40px] gap-2 z-20"
                       type="button"
